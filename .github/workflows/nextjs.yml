@@ -52,5 +52,5 @@ jobs:
         uses: amondnet/vercel-action@v20
         with:
          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-         vercel-args: "--prod --yes"
+         vercel-args: "--prod --yes --name vyx"
          working-directory: ./
