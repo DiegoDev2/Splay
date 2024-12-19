@@ -1,5 +1,4 @@
 import BadgeObj from './ui/objetives/badge'
-import Badge from './ui/objetives/badge'
 import { BentoGridThirdDemo } from './ui/objetives/bento-grid'
 
 export default function Objetives() {
