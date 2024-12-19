@@ -34,10 +34,10 @@ const Header: React.FC = () => {
       }}
     >
       <div className="gap-x-14 items-center max-w-screen-full mx-auto px-4 md:flex md:px-8">
-        <div className="flex items-center px-10 justify-between py-6 md:block">
+        <div className="flex items-center px-10 justify-between py-4 md:block">
           <a href="javascript:void(0)">
             <Image
-              src={"/vercel.svg"}
+              src={"/logo/vyx-white.png"}
               width={30}
               height={30}
               alt="Voulty logo"
