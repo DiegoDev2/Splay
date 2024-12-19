@@ -20,6 +20,20 @@ body {
   left: 35%;
   right: 0%;
 }
+.hero_gardient_small {
+  z-index: -1;
+  opacity: .75;
+  filter: blur(200px);
+  background-image: linear-gradient(#601ef9, rgba(255, 255, 255, 0));
+  border-radius: 100%;
+  width: 10rem; /* Further reduced width */
+  height: 10rem; /* Further reduced height */
+  position: absolute;
+  top: 40%; /* Moved further down */
+  bottom: auto; /* Adjusted bottom */
+  left: 75%; /* Moved to the right */
+  right: auto; /* Adjusted right */
+}
 
 @layer base {
   :root {

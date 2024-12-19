@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import { Landing } from "@/components/landing";
+import  Objetives  from "@/components/objetives";
 
 export default function Home() {
   return (
