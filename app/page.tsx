@@ -8,6 +8,7 @@ export default function Home() {
     
       <Header />
       <Landing />
+      <Objetives />
       <div className="hero_gardient"></div>
 
      {/*
