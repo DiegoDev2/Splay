@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
-import { Youtube } from "lucide-react";
+
 
 const Circle = forwardRef<
   HTMLDivElement,
