@@ -1,12 +1,11 @@
-import BadgeObj from './ui/objetives/badge'
-import { BentoGridThirdDemo } from './ui/objetives/bento-grid'
+import Ben from './ui/objetives/ben'
 
 export default function Objetives() {
     return(
     <>
     <div className='justify-center items-center py-10'> 
-        <BadgeObj text="Objetives"/>
-        <BentoGridThirdDemo />
+        <Ben />
+        <div className='hero_gardient2'></div>
     </div>
         
     </>
