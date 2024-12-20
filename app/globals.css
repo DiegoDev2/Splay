@@ -15,9 +15,23 @@ body {
   width: 50rem;
   height: 24rem;
   position: absolute;
-  top: -15%;
+  top: -5%;
   bottom: 0%;
   left: 35%;
+  right: 0%;
+}
+.hero_gardient2 {
+  z-index: -1;
+  opacity: .75;
+  filter: blur(200px);
+  background-image: linear-gradient(#601ef98d, rgba(255, 255, 255, 0));
+  border-radius: 100%;
+  width: 50rem;
+  height: 24rem;
+  position: absolute;
+  top: 50%;
+  bottom: 0%;
+  left: 10%;
   right: 0%;
 }
 .hero_gardient_small {
@@ -29,7 +43,7 @@ body {
   width: 10rem; /* Further reduced width */
   height: 10rem; /* Further reduced height */
   position: absolute;
-  top: 40%; /* Moved further down */
+  top: 20%; /* Moved further down */
   bottom: auto; /* Adjusted bottom */
   left: 75%; /* Moved to the right */
   right: auto; /* Adjusted right */

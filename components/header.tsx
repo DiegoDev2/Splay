@@ -13,8 +13,7 @@ const Header: React.FC = () => {
   const navigation: NavigationItem[] = [
     { title: "Features", path: "#features" },
     { title: "Benefits", path: "#benefits" },
-    { title: "Pricings", path: "#pricings" },
-    { title: "Ceo", path: "#ceo" },
+    { title: "Team", path: "#pricings" },
   ];
 
   useEffect(() => {
