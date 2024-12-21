@@ -1,8 +1,9 @@
-import { SupabaseAdapter } from "@next-auth/supabase-adapter";
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+import { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
+import { SupabaseAdapter } from '@next-auth/supabase-adapter';
 
-export const authOptions = {
+export const handler = (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res, {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -14,9 +15,8 @@ export const authOptions = {
     secret: process.env.SUPABASE_SERVICE_ROLE_KEY!,
   }),
   secret: process.env.NEXTAUTH_SECRET!,
-};
+});
 
-export default NextAuth(authOptions);
 
 
 
