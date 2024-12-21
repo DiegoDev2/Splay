@@ -90,7 +90,7 @@ const PreRegister = () => {
         numSquares={30}
         maxOpacity={0.15} // Adjusted opacity to be low
         duration={3}
-        repeatDelay={1}
+
         className={cn(
           "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
           "absolute inset-y-0 left-0 w-1/2 h-full skew-y-12 -z-0", // Ensured it's only on the left
