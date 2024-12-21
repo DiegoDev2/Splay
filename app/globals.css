@@ -20,6 +20,7 @@ body {
   left: 35%;
   right: 0%;
 }
+
 .hero_gardient2 {
   z-index: -1;
   opacity: .75;
@@ -29,24 +30,31 @@ body {
   width: 50rem;
   height: 24rem;
   position: absolute;
-  top: 50%;
+  top: 120%;
   bottom: 0%;
   left: 10%;
   right: 0%;
 }
+
 .hero_gardient_small {
   z-index: -1;
   opacity: .75;
   filter: blur(200px);
   background-image: linear-gradient(#601ef9, rgba(255, 255, 255, 0));
   border-radius: 100%;
-  width: 10rem; /* Further reduced width */
-  height: 10rem; /* Further reduced height */
+  width: 10rem;
+  /* Further reduced width */
+  height: 10rem;
+  /* Further reduced height */
   position: absolute;
-  top: 20%; /* Moved further down */
-  bottom: auto; /* Adjusted bottom */
-  left: 75%; /* Moved to the right */
-  right: auto; /* Adjusted right */
+  top: 20%;
+  /* Moved further down */
+  bottom: auto;
+  /* Adjusted bottom */
+  left: 75%;
+  /* Moved to the right */
+  right: auto;
+  /* Adjusted right */
 }
 
 @layer base {
@@ -77,6 +85,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -109,6 +118,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

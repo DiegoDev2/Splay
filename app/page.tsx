@@ -1,20 +1,22 @@
 import Header from "@/components/header";
 import { Landing } from "@/components/landing";
-import  Objetives  from "@/components/objetives";
-import ScrollEffect from "@/components/ui/scroll";
+import Objetives from "@/components/objetives";
+
+
+
 
 export default function Home() {
   return (
     <>
-    <ScrollEffect>
+
       <Header />
       <Landing />
       <Objetives />
       <div className="hero_gardient"></div>
-    </ScrollEffect>
-      
 
-     {/*
+
+
+      {/*
   ____          _____  _                  _____            ___  
  |  _ \        |  __ \(_)                |  __ \          |__ \ 
  | |_) |_   _  | |  | |_  ___  __ _  ___ | |  | | _____   __ ) |
@@ -27,6 +29,6 @@ export default function Home() {
         A Project open sourced by Vyx
      */}
 
-  </>
+    </>
   );
 }
