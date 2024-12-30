@@ -1,8 +1,5 @@
-"use client";
-
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-
 import { cn } from "@/lib/utils";
 
 interface AnimatedGridPatternProps {
@@ -10,7 +7,7 @@ interface AnimatedGridPatternProps {
   height?: number;
   x?: number;
   y?: number;
-  strokeDasharray?: string | number; // Especificar tipo correcto
+  strokeDasharray?: string | number;
   numSquares?: number;
   className?: string;
   maxOpacity?: number;
@@ -32,21 +29,28 @@ export default function AnimatedGridPattern({
   const id = useId();
   const containerRef = useRef<SVGSVGElement | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
-  function getPos() {
+  // Helper para obtener posición
+  const getPos = useCallback(() => {
     return [
       Math.floor((Math.random() * dimensions.width) / width),
       Math.floor((Math.random() * dimensions.height) / height),
     ];
-  }
+  }, [dimensions, width, height]);
 
-  function generateSquares(count: number) {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      pos: getPos(),
-    }));
-  }
+  // Memorizar la función generateSquares
+  const generateSquares = useCallback(
+    (count: number) => {
+      return Array.from({ length: count }, (_, i) => ({
+        id: i,
+        pos: getPos(),
+      }));
+    },
+    [getPos] // Dependencia de la función
+  );
+
+  // Mueve la inicialización del estado aquí
+  const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
   const updateSquarePosition = (id: number) => {
     setSquares((currentSquares) =>
@@ -61,14 +65,14 @@ export default function AnimatedGridPattern({
     );
   };
 
-  // Ajustar squares cuando las dimensiones están disponibles
+  // Efecto para inicializar los cuadrados
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
-  }, [dimensions, numSquares, generateSquares]); // Agregar generateSquares como dependencia
+  }, [dimensions, numSquares, generateSquares]);
 
-  // Resize observer para actualizar el tamaño del contenedor
+  // Resize observer para actualizar dimensiones
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
