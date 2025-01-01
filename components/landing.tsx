@@ -16,9 +16,13 @@ export function Landing() {
                 <p className="mt-4 text-lg">
                     Ad-free, copyright-free music, expertly crafted to amplify your streams and captivate your audience.
                 </p>
-                <button className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium">
-                    Pre-Register
-                </button>
+
+               <a href="/register">
+                    <button className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium">
+                        Pre-Register
+                    </button>
+               </a> 
+                
             </div>
             <div className="flex-shrink-0 w-1/3 h-full">
                 <div className="hero_gardient_small"></div>
