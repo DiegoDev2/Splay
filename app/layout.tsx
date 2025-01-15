@@ -5,13 +5,13 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ["100" , "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 
 export const metadata: Metadata = {
-  title: "Vyx",
-  description: "Vyx is streaming reimagined: ad-free, copyright-free, hardstyle, and lofi.",
+  title: "Splay",
+  description: "Splay is streaming reimagined: ad-free, copyright-free, hardstyle, and lofi.",
 };
 
 export default function RootLayout({
@@ -24,9 +24,9 @@ export default function RootLayout({
       <body
         className={`${poppins.className}  antialiased`}
       >
-        <Analytics/>
+        <Analytics />
         {children}
-    
+
       </body>
     </html>
   );
