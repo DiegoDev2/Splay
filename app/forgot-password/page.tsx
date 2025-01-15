@@ -26,12 +26,21 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { forgotPassword } from "./action";
+import { Suspense } from "react";
 
 const formSchema = z.object({
   email: z.string().email(),
 });
 
 export default function ForgotPassword() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ForgotPasswordForm />
+    </Suspense>
+  );
+}
+
+function ForgotPasswordForm() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -68,6 +77,7 @@ export default function ForgotPassword() {
     }
   };
   return (
+  <Suspense fallback={<div>Loading...</div>}>
     <main className="flex justify-center items-center min-h-screen">
       <Card className="w-[380px]">
         <CardHeader>
@@ -128,5 +138,6 @@ export default function ForgotPassword() {
         </CardFooter>
       </Card>
     </main>
+  </Suspense>
   );
 }
