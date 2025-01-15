@@ -2,7 +2,9 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "next/typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -10,10 +12,10 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "warn",  // Aviso en lugar de error por 'any'
-    "@typescript-eslint/no-unused-vars": "warn",  // Aviso por variables no usadas
-    "react-hooks/exhaustive-deps": "warn",  // Aviso por dependencias de hooks faltantes
-    "no-require-imports": "error"  // Evitar usar require() en vez de import
+    "@typescript-eslint/no-explicit-any": "warn",  
+    "@typescript-eslint/no-unused-vars": "warn",  
+    "react-hooks/exhaustive-deps": "warn",  
+    "no-require-imports": "error"  
   },
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -25,4 +27,3 @@
     }
   }
 }
-

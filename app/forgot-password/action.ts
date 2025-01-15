@@ -18,22 +18,15 @@ export const forgotPassword = async ({ email }: { email: string }) => {
     return {
       error: true,
       message:
-        forgotPasswordValidation.error.issues[0]?.message ?? "An error occured",
+        forgotPasswordValidation.error.issues[0]?.message ?? "An error occurred",
     };
   }
 
-  // supabase authentication from here
   const supabase = await createClient();
 
   const { error } = await supabase.auth.resetPasswordForEmail(email);
 
   console.log("err: ", error);
-  // if (error === null) {
-  //   return {
-  //     error: true,
-  //     message: "No such email registered",
-  //   };
-  // }
 
   if (error) {
     return {
@@ -42,7 +35,6 @@ export const forgotPassword = async ({ email }: { email: string }) => {
     };
   }
 
-  // User successfully found
   return {
     success: true,
     message:

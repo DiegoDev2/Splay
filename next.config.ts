@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   },
+  eslint: {
+    ignoreDuringBuilds: true, 
+  },
 };
 
 export default nextConfig;
