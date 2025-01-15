@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 60s
+
+scrape_configs:
+  - job_name: "Splay-Metrics" 
+    metrics_path: "/customer/v1/privileged/metrics"
+    scheme: https
+    basic_auth:
+      username: "example"
+      password: "example"
+    static_configs:
+      - targets: 
+          - "example.supabase.co:443"
+        labels:
+          group: "Example Org"
