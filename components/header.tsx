@@ -36,10 +36,10 @@ const Header: React.FC = () => {
         <div className="flex items-center px-10 justify-between py-4 md:block">
           <a href="javascript:void(0)">
             <Image
-              src={"/logo/vyx-white.png"}
+              src={"/logo/SplayS.png"}
               width={30}
               height={30}
-              alt="Voulty logo"
+              alt="Splay"
             />
           </a>
           <div className="md:hidden">

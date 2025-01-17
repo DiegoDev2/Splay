@@ -68,7 +68,7 @@ export function Map({
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="size-16">
-            <Icons.vyx />
+            <Icons.splay />
           </Circle>
         </div>
         <div className="flex flex-col justify-center">
@@ -116,8 +116,8 @@ const Icons = {
   soundcloud: () => (
    <Image src="/providers/soundcloud.svg" alt="SoundCloud" width={200} height={200}  unoptimized/>
   ),
-  vyx: () => (
-    <Image src="/logo/vyx-black.png" alt="vyx" width={20} height={20} unoptimized/>
+  splay: () => (
+    <Image src="/logo/SplayS.png" alt="vyx" width={20} height={20} unoptimized/>
   ),
   jamendo: () => (
     <Image src="/providers/jamendo.png" alt="Jamendo" width={200} height={200} unoptimized/>

@@ -64,4 +64,3 @@ export default {
   },
   plugins: [tailwindAnimate],  // Usar el import en vez de require()
 } satisfies Config;
-
