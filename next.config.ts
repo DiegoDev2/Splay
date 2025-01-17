@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["pbs.twimg.com", "tailwindui.com"],
+    domains: ["pbs.twimg.com", "tailwindui.com", "assets.aceternity.com"],
   },
   env: {
     SUPABASE_URL: process.env.SUPABASE_URL,

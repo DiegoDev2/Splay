@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
-// import { Button } from "@/components/ui/button";
 import LogoutButton from "./LogoutButton";
+import Siderbar from "@/components/dashboard/Sidebar";
+import Noise from "@/components/noise";
 
 export default async function Dashboard() {
   const supabase = await createClient();
@@ -11,11 +12,18 @@ export default async function Dashboard() {
   }
 
   return (
-    <>
-      <div>Dashboard</div>
-      <p>Hello {data.user.email}</p>
+    <div className="relative w-full h-screen overflow-hidden bg-[#17171F]">
+      <Noise
+        patternSize={100}
+        patternScaleX={1}
+        patternScaleY={1}
+        patternRefreshInterval={2}
+        patternAlpha={15}
+      />
 
-      <LogoutButton />
-    </>
+      <div className="absolute inset-0">
+        <Siderbar />
+      </div>
+    </div>
   );
 }
