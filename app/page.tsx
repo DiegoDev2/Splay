@@ -1,18 +1,27 @@
 import Header from "@/components/header";
 import { Landing } from "@/components/landing";
 import Objetives from "@/components/objetives";
-
-
-
+import Noise from "@/components/noise";
 
 export default function Home() {
   return (
     <>
 
+      <div className="absolute inset-0 z-0">
+        <Noise
+          patternSize={100}
+          patternScaleX={1}
+          patternScaleY={1}
+          patternRefreshInterval={2}
+          patternAlpha={15}
+        />
+
+
+      </div>
       <Header />
       <Landing />
-      <Objetives />
-      <div className="hero_gardient"></div>
+
+     
 
 
 
@@ -26,7 +35,7 @@ export default function Home() {
          __/ |                 __/ |                            
         |___/                 |___/                             
 
-        A Project open sourced by Vyx
+
      */}
 
     </>
