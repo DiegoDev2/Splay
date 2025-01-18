@@ -120,10 +120,16 @@ Directory structure:
     │   └── ui/
     ├── utils/
     │   └── supabase/
-    │       ├── client.ts
+    │       ├── client.ts![arquitecturesplay drawio](https://github.com/user-attachments/assets/0f43dc6d-4e13-49b2-85f5-72d36ee36b0e)
+
     │       ├── middleware.ts
     │       └── server.ts
     └── validation/
         ├── passwordMatchSchema.ts
         └── passwordSchema.ts
  ```
+
+### 🏛 Arquitecture
+
+
+![arquitecturesplay drawio](https://github.com/user-attachments/assets/a40fba38-b4dc-4166-8fcb-d51edcf25a1a)
