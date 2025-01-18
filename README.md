@@ -129,7 +129,9 @@ Directory structure:
         └── passwordSchema.ts
  ```
 
+
 ### 🏛 Arquitecture
+![Splay drawio](https://github.com/user-attachments/assets/0e848fa5-c96a-41f5-bfb4-362aa17ae9be)
 
 
-![arquitecturesplay drawio](https://github.com/user-attachments/assets/a40fba38-b4dc-4166-8fcb-d51edcf25a1a)
+
